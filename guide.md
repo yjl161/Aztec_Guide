@@ -435,8 +435,8 @@ This phase is typically done via a rescue system or a specialized installation i
     ```ini
     [Unit]
     Description=Aztec Sequencer Node
-    After=network-online.target docker.service geth-sepolia.service lighthouse-sepolia.service
-    Wants=network-online.target docker.service geth-sepolia.service lighthouse-sepolia.service
+    After=network-online.target
+    Wants=network-online.target
 
     [Service]
     User=root # Or dedicated user with access to ~/.aztec
