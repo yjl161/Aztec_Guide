@@ -1,4 +1,4 @@
-# Server Setup Guide: LVM, Ethereum Node (Sepolia), and Aztec Sequencer
+# Server Setup Guide: Ethereum Node (Sepolia) and Aztec Sequencer
 
 This guide walks you through setting up a Linux server, configuring LVM for disk management, installing and syncing an Ethereum Sepolia testnet node (Geth and Lighthouse), and finally setting up an Aztec Sequencer. 
 
