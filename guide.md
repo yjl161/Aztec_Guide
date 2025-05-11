@@ -250,7 +250,7 @@ This phase is typically done via a rescue system or a specialized installation i
 
     ```bash
     cd /tmp
-    curl -LO [https://github.com/sigp/lighthouse/releases/download/v7.0.1/lighthouse-v7.0.1-x86_64-unknown-linux-gnu.tar.gz](https://github.com/sigp/lighthouse/releases/download/v7.0.1/lighthouse-v7.0.1-x86_64-unknown-linux-gnu.tar.gz)
+    curl -LO https://github.com/sigp/lighthouse/releases/download/v7.0.1/lighthouse-v7.0.1-x86_64-unknown-linux-gnu.tar.gz
     tar -xvf lighthouse-v7.0.1-x86_64-unknown-linux-gnu.tar.gz
     sudo cp lighthouse /usr/local/bin/
     lighthouse --version
@@ -279,7 +279,7 @@ This phase is typically done via a rescue system or a specialized installation i
     ExecStart=/usr/local/bin/lighthouse beacon \
         --network sepolia \
         --datadir /home/ethereum_sepolia/consensus \
-        --execution-endpoint [http://127.0.0.1:8551](http://127.0.0.1:8551) \
+        --execution-endpoint http://127.0.0.1:8551 \
         --execution-jwt /home/ethereum_sepolia/jwt/jwt.hex \
         --http \
         --http-address 0.0.0.0 \
@@ -287,7 +287,7 @@ This phase is typically done via a rescue system or a specialized installation i
         --metrics \
         --metrics-address 0.0.0.0 \
         --metrics-port 5054 \
-        --checkpoint-sync-url [https://checkpoint-sync.sepolia.ethpandaops.io](https://checkpoint-sync.sepolia.ethpandaops.io) \
+        --checkpoint-sync-url https://checkpoint-sync.sepolia.ethpandaops.io \
         --target-peers 125
     LimitNOFILE=65535
 
@@ -313,7 +313,7 @@ This phase is typically done via a rescue system or a specialized installation i
 2.  **Check Geth Sync Status:**
 
     ```bash
-    geth attach [http://127.0.0.1:8545](http://127.0.0.1:8545)
+    geth attach http://127.0.0.1:8545
     ```
     In Geth console:
     ```javascript
@@ -364,11 +364,11 @@ This phase is typically done via a rescue system or a specialized installation i
     sudo apt-get update
     sudo apt-get install -y ca-certificates curl gnupg
     sudo install -m 0755 -d /etc/apt/keyrings
-    curl -fsSL [https://download.docker.com/linux/ubuntu/gpg](https://download.docker.com/linux/ubuntu/gpg) | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
     sudo chmod a+r /etc/apt/keyrings/docker.gpg
 
     echo \
-      "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] [https://download.docker.com/linux/ubuntu](https://download.docker.com/linux/ubuntu) \
+      "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
       $(. /etc/os-release && echo "$VERSION_CODENAME") stable" | \
       sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
     sudo apt-get update
@@ -399,7 +399,7 @@ This phase is typically done via a rescue system or a specialized installation i
 1.  **Install Aztec:**
 
     ```bash
-    bash -i <(curl -s [https://install.aztec.network](https://install.aztec.network))
+    bash -i <(curl -s https://install.aztec.network)
     ```
 
 2.  **Update PATH:**
