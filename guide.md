@@ -446,8 +446,8 @@ This phase is typically done via a rescue system or a specialized installation i
     WorkingDirectory=/root/ # Or $HOME of the user running aztec
     # Ensure ExecStart path is correct, typically $HOME/.aztec/bin/aztec
     ExecStart=/root/.aztec/bin/aztec start --node --archiver --sequencer --network alpha-testnet \
-      --l1-rpc-urls=[http://host.docker.internal:8545](http://host.docker.internal:8545) \
-      --l1-consensus-host-urls=[http://host.docker.internal:5052](http://host.docker.internal:5052) \
+      --l1-rpc-urls=http://host.docker.internal:8545 \
+      --l1-consensus-host-urls=http://host.docker.internal:5052 \
       --sequencer.validatorPrivateKey=YOUR_SEQUENCER_VALIDATOR_PRIVATE_KEY_HERE \
       --sequencer.coinbase=YOUR_ETH_COINBASE_ADDRESS_HERE \
       --p2p.p2pIp=YOUR_SERVER_PUBLIC_IP_HERE \
